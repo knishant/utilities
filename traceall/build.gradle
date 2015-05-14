@@ -1,0 +1,11 @@
+archivesBaseName = 'traceall'
+
+def major = 0
+def minor = 1
+def prodReady = false
+
+version = "$major.$minor${prodReady ? '-RELEASE' : '-SNAPSHOT'}"
+
+dependencies {
+    compile('org.aspectj:aspectjrt:1.8.5')
+}
