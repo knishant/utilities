@@ -5,7 +5,7 @@ package org.nkumar.utilities.traceall;
  */
 public final class Util
 {
-    private static final String[] PADDING = new String[16];
+    private static final String[] PADDING = new String[100];
 
     private static final String UNIT_PADDING = "  ";
 

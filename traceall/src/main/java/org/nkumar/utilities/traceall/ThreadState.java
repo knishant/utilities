@@ -19,7 +19,7 @@ public final class ThreadState
 
     //least number of ms a method should take before it is logged.
     //default to 2 ms
-    private static final int LEAST_COUNT = Integer.getInteger("org.nkumar.traceall.tracing.leastCount", 2);
+    private static final int LEAST_COUNT = Integer.getInteger("org.nkumar.utilities.traceall.leastCount", 2);
 
     private static int globalThreadId = -1;
 

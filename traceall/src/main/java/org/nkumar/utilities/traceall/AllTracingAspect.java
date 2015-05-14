@@ -9,12 +9,7 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class AllTracingAspect
 {
-    @Pointcut("(within(org.lobobrowser..*))")
-    public void scope()
-    {
-    }
-
-    @Pointcut("(execution(* *(..)) || execution(*.new(..))) && scope()")
+    @Pointcut("execution(* *(..)) || execution(*.new(..))")
     public void tracingPoints()
     {
     }

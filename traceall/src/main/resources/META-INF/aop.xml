@@ -1,0 +1,9 @@
+<aspectj>
+    <aspects>
+        <aspect name="org.nkumar.utilities.traceall.AllTracingAspect"/>
+    </aspects>
+    <weaver>
+        <include within="com.cisco.*"/>
+    </weaver>
+</aspectj>
+
