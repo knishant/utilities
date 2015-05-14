@@ -1,1 +1,1 @@
-include 'traceall'
+include 'traceall','huge'
