@@ -1,17 +1,11 @@
-apply plugin: 'java'
-group = 'org.nkumar'
-archivesBaseName = 'utilities'
-def major = 0
-def minor = 1
-def prodReady = false
-
-version = "$major.$minor${prodReady ? '-RELEASE' : '-SNAPSHOT'}"
-
-targetCompatibility = 1.7
-sourceCompatibility = 1.7
-
-repositories {
-    mavenCentral()
+configure(allprojects) {
+    repositories {
+        mavenCentral()
+    }
+    apply plugin: 'java'
+    group = 'org.nkumar.utilities'
+    targetCompatibility = 1.7
+    sourceCompatibility = 1.7
 }
 
 
