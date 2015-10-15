@@ -9,5 +9,5 @@ configure(allprojects) {
 }
 
 
-wrapper.gradleVersion = '2.3'
+wrapper.gradleVersion = '2.6'
 
