@@ -1,11 +1,24 @@
-archivesBaseName = 'traceall'
+plugins {
+    id 'java'
+}
 
-def major = 0
-def minor = 1
-def prodReady = false
+group = 'org.nkumar.utilities'
+version = '1.0.0'
+//archivesBaseName = 'traceall'
 
-version = "$major.$minor${prodReady ? '-RELEASE' : '-SNAPSHOT'}"
+repositories {
+    mavenCentral()
+}
 
 dependencies {
-    compile('org.aspectj:aspectjrt:1.8.5')
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    compileOnly 'org.aspectj:aspectjrt:1.9.22'
 }
