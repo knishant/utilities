@@ -6,4 +6,4 @@ set CLASSPATH=%CLASSPATH%;<aspectj_path>/aspectjweaver.jar;<traceall_dir>/tracea
 
 set JAVA_OPTS=-javaagent:<aspectj_path>/aspectjweaver.jar -Dorg.nkumar.utilities.traceall.leastCount=50
 
-#change the scope in AllTracingAspect
+#change the scope in AllTracingAspect and target classes in resources/META-INF/aop.xml

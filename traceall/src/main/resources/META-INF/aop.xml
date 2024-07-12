@@ -3,7 +3,7 @@
         <aspect name="org.nkumar.utilities.traceall.AllTracingAspect"/>
     </aspects>
     <weaver>
-        <include within="com.cisco.*"/>
+        <include within="com.*"/>
     </weaver>
 </aspectj>
 
