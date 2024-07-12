@@ -33,7 +33,7 @@ public final class Main {
     }
 
     private static void printUsage(int exitCode) {
-        System.out.println("java -jar huge.jar [-root rootdir] [-maxMBs <size in MB>] [-h]");
+        System.out.println("java -jar huge.jar [-root rootdir] [-max <size in MB>] [-h]");
         System.out.println("Default root dir is the current directory");
         System.out.println("Default max size is 100 MB");
         printOutputFormat();
