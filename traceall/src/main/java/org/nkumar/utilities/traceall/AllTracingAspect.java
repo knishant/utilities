@@ -7,25 +7,19 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
-public class AllTracingAspect
-{
+public class AllTracingAspect {
     @Pointcut("execution(* *(..)) || execution(*.new(..))")
-    public void tracingPoints()
-    {
+    public void tracingPoints() {
     }
 
     @Around("tracingPoints()")
-    public Object aroundTracingPoints(final ProceedingJoinPoint joinPoint) throws Throwable
-    {
+    public Object aroundTracingPoints(final ProceedingJoinPoint joinPoint) throws Throwable {
         final JoinPoint.StaticPart joinPointStaticPart = joinPoint.getStaticPart();
         Trace.traceEntry(joinPointStaticPart);
         final Object returnValue;
-        try
-        {
+        try {
             returnValue = joinPoint.proceed(joinPoint.getArgs());
-        }
-        catch (Throwable ex)
-        {
+        } catch (Throwable ex) {
             Trace.traceExit(joinPointStaticPart, false);
             throw ex;
         }
